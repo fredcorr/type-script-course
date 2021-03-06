@@ -12,7 +12,10 @@ const person = {
 // Telling typescript that this var is an array of strings
 let favouriteActivities: string[]; 
 
-console.log( person.name );
+for ( const hobby of person.hobbies ) {
+    console.log( hobby.toUpperCase() );
+    // console.log( hobby.map() ) ---> ERROR!! hobby is not an array
+}
 
 // Nested object
 // const product: {
