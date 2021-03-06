@@ -1,28 +1,17 @@
-// Exmples of types Allias combined with Union Types
-type Combinable = number | string;
-type ConversionDisc = 'as-numbers' | 'as-text'
-
-function combine( 
-    input1: Combinable, 
-    input2: Combinable, 
-    resultConversion: ConversionDisc
-    ) { 
-    let result;
-    if ( typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-numbers' ) {
-        result = +input1 + +input2;
-    } else {
-        result = input1.toString() + input2.toString();
-    }
-
-    return result;
+function add( n1: number, n2: number ) { 
+    return n1 + n2;
 }
 
-const combinedAges = combine( 30, 26, 'as-numbers' );
-console.log( combinedAges );
+// The return type is a void type
+function printResult1( num: number ): void {
+    console.log( 'Result: ' + num );
+    // the function doesn't esplcitly return anything, which means that typescpit would consider the outcome void
+}
 
-const combinedStringAges = combine( '30', '26', 'as-numbers' )
-console.log( combinedStringAges );
+function printResult2( num: number ):undefined {
+    console.log( 'Result: ' + num );
+    return;
+    // the function returns nothing but it still contains return, which would be euqual to undefined
+}
 
-
-const combinedNames = combine( 'Max', 'Anna', 'as-text' );
-console.log( combinedNames );
+printResult1( add( 5, 12 ) )
