@@ -1,16 +1,20 @@
 // Normal object
-// const person: {
-//     name: string,
-//     age: number
-// } = {
-const person = {
+const person: {
+    name: string,
+    age: number
+    hobbies: string[],
+    // The one below is a Tupel
+    role: [ number , string ]
+} = {
     name: 'Maximilian',
     age: 30,
-    hobbies: [ 'Sports', 'Cooking' ]
+    hobbies: [ 'Sports', 'Cooking' ],
+    role: [ 2, 'author' ]
 }
 
 // Telling typescript that this var is an array of strings
-let favouriteActivities: string[]; 
+let favouriteActivities: string[];
+// person.role[1] = 10; ----> It's an ERROR
 
 for ( const hobby of person.hobbies ) {
     console.log( hobby.toUpperCase() );
