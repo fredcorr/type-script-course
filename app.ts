@@ -15,3 +15,10 @@ function printResult2( num: number ):undefined {
 }
 
 printResult1( add( 5, 12 ) )
+// Asserting that combinedValue shoudl hold a function, with two parameters number, returning a number
+let combinedValue: ( a: number, b: number) => number;
+combinedValue = add;
+// combinedValue = printResult1 -----> combinedValue must hold a function with the parameters number, returning a number *ERROR*
+// combinedValue = 5; -----> combinedValue must hold a function *ERROR*
+
+console.log( combinedValue( 8, 8 ) );
