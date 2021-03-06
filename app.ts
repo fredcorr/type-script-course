@@ -11,3 +11,10 @@ if ( typeof userInput === `string` ) {
     userName = userInput;
 }
 
+// as this function throws an error, then it never return anything, that's why the type never
+function generateError( message:string, code: number ): never {
+    throw { message: message, errorCode: code }
+}
+
+generateError( 'An error occured', 500 )
+
