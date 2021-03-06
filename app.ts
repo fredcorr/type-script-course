@@ -6,7 +6,11 @@
 const person = {
     name: 'Maximilian',
     age: 30,
+    hobbies: [ 'Sports', 'Cooking' ]
 }
+
+// Telling typescript that this var is an array of strings
+let favouriteActivities: string[]; 
 
 console.log( person.name );
 
