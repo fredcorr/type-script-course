@@ -1,7 +1,11 @@
+// Exmples of types Allias combined with Union Types
+type Combinable = number | string;
+type ConversionDisc = 'as-numbers' | 'as-text'
+
 function combine( 
-    input1: number | string, 
-    input2: number | string, 
-    resultConversion: 'as-numbers' | 'as-text' 
+    input1: Combinable, 
+    input2: Combinable, 
+    resultConversion: ConversionDisc
     ) { 
     let result;
     if ( typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-numbers' ) {
