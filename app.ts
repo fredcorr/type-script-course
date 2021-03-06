@@ -22,7 +22,6 @@ function addAndHandle( n1: number, n2: number, cb: ( num: number ) => void ) {
 
 addAndHandle( 10, 20, (result) => {
     console.log( result );
-    
 })
 
 printResult1( add( 5, 12 ) )
