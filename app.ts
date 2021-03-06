@@ -1,15 +1,11 @@
+enum Role { ADMIN = 'ADMIN', READ_ONLY = 100, AUTHOR = 300 }
+
 // Normal object
-const person: {
-    name: string,
-    age: number
-    hobbies: string[],
-    // The one below is a Tupel
-    role: [ number , string ]
-} = {
+const person = {
     name: 'Maximilian',
     age: 30,
     hobbies: [ 'Sports', 'Cooking' ],
-    role: [ 2, 'author' ]
+    role: Role.ADMIN
 }
 
 // Telling typescript that this var is an array of strings
@@ -40,3 +36,8 @@ const product ={
       description: 'A great carpet - almost brand-new!'
     }
   }
+
+if ( person.role === Role.ADMIN ) {
+    console.log( 'is admin' );
+    
+}
