@@ -1,17 +1,31 @@
-function add( n1: number, n2: number, showResult: boolean, phrase: string ) { 
-    const result = n1 + n2;
-    if ( showResult ) {
-        console.log( phrase + result )
-    } else {
-        return result;
-    }  
+// Normal object
+// const person: {
+//     name: string,
+//     age: number
+// } = {
+const person = {
+    name: 'Maximilian',
+    age: 30,
 }
 
-// telling typescrpit which type of value will be stored inside numeber1
-let number1: number;
-number1 = 5;
-const number2 = 2.8;
-const printResult = true;
-const resultPhrase = 'Result is '
+console.log( person.name );
 
-add( number1, number2, printResult, resultPhrase )
+// Nested object
+// const product: {
+//     id: string;
+//     price: number;
+//     tags: string[],
+//     details: {
+//       title: string;
+//       description: string;
+//     }
+//   } = {
+const product ={
+    id: 'abc1',
+    price: 12.99,
+    tags: ['great-offer', 'hot-and-new'],
+    details: {
+      title: 'Red Carpet',
+      description: 'A great carpet - almost brand-new!'
+    }
+  }
