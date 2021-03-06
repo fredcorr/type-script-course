@@ -14,6 +14,17 @@ function printResult2( num: number ):undefined {
     // the function returns nothing but it still contains return, which would be euqual to undefined
 }
 
+// Esplicitely declaring the form of the callback functions
+function addAndHandle( n1: number, n2: number, cb: ( num: number ) => void ) {
+    const result = n1 + n2;
+    cb( result );
+}
+
+addAndHandle( 10, 20, (result) => {
+    console.log( result );
+    
+})
+
 printResult1( add( 5, 12 ) )
 // Asserting that combinedValue shoudl hold a function, with two parameters number, returning a number
 let combinedValue: ( a: number, b: number) => number;
