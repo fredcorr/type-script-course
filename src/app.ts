@@ -1,7 +1,7 @@
 class Department {
     private employees: string[] = [] 
 
-    constructor( private id: string, public name: string ) {
+    constructor( private readonly id: string, public name: string ) {
     }
 
     describe( this: Department ) {
@@ -18,13 +18,32 @@ class Department {
     }
 }
 
-const accounting = new Department( 'LS' ,'Accounting' );
+class ITDepartment extends Department {
 
-accounting.addEmployee( 'Max' );
-accounting.addEmployee( 'Manu' );
+    constructor( id: string, public admins: string[], private reports: string[] = [] ) {
+        super(id, 'IT');
+    }
 
-accounting.describe();
-accounting.printEmployeeInformation();
+    addReports( text: string ) {
+        this.reports.push( text )
+    }
+
+    printReports() {
+        console.log( this.reports );
+        
+    }
+}
+
+const IT = new ITDepartment( 'LS', [ 'Max' ] );
+
+IT.addEmployee( 'Max' );
+IT.addEmployee( 'Manu' );
+
+IT.describe();
+IT.printEmployeeInformation();
+
+console.log( IT );
+
 
 // const accountingCopy = { name: 'DUMMY', describe: accounting.describe };
 // accountingCopy.describe();
