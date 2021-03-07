@@ -1,3 +1,4 @@
+"use strict";
 var userInput;
 var userName;
 //All of the one below are valid
@@ -8,6 +9,7 @@ userInput = 'Max';
 if (typeof userInput === "string") {
     userName = userInput;
 }
+// as this function throws an error, then it never return anything, that's why the type never
 function generateError(message, code) {
     throw { message: message, errorCode: code };
 }
