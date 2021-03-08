@@ -35,6 +35,16 @@ function add(a:Combinable, b: Combinable) {
 const result = add( 'Freddie', 'Corradi' )
 result.split( ' ' );
 
+// OPTIONAL CHASING
+const fetchedUserData = {
+    id: 'u1',
+    name: 'Max',
+    job: { title: 'CEO', description: 'My company' }
+}
+
+console.log( fetchedUserData?.job?.title );
+
+
 type UknownEmployee = Employee | Admin;
 
 function  printEmployeeInformation(emp:UknownEmployee) {
