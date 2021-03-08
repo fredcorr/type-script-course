@@ -100,3 +100,8 @@ function moveAnimal( animal:Animal ) {
 }
  
 moveAnimal( { type: 'bird', fyingSpeed: 10 } )
+
+// const userInpurElement = <HTMLInputElement>document.getElementById('message-output')!;
+// REACT WAY
+const userInpurElement = document.getElementById('user-input')! as HTMLInputElement;
+userInpurElement.value = 'Hi there';
