@@ -7,7 +7,7 @@ let user1: Greetable;
 
 class Person implements Greetable {
 
-    name: string;
+    readonly name: string;
     age = 30
 
     constructor( n: string ) {
@@ -16,7 +16,6 @@ class Person implements Greetable {
 
     greet( phrase: string ) {
         console.log( phrase + ' ' + this.name );
-        
     }
 
 }
