@@ -4,8 +4,14 @@ const e1 = {
     priveleges: ['create-server'],
     startDate: new Date()
 };
-function add(n1, b) {
+function add(a, b) {
+    if (typeof a === 'string' || typeof b === 'string') {
+        return a.toString() + b.toString();
+    }
+    return a + b;
 }
+const result = add('Freddie', 'Corradi');
+result.split(' ');
 function printEmployeeInformation(emp) {
     console.log('Name: ' + emp.name);
     if ('priveleges' in emp) {
