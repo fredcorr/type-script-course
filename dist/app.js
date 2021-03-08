@@ -19,6 +19,9 @@ const fetchedUserData = {
     job: { title: 'CEO', description: 'My company' }
 };
 console.log((_a = fetchedUserData === null || fetchedUserData === void 0 ? void 0 : fetchedUserData.job) === null || _a === void 0 ? void 0 : _a.title);
+const userInput = undefined;
+const storedData = userInput !== null && userInput !== void 0 ? userInput : 'DEFAULT';
+console.log(storedData);
 function printEmployeeInformation(emp) {
     console.log('Name: ' + emp.name);
     if ('priveleges' in emp) {

@@ -44,6 +44,11 @@ const fetchedUserData = {
 
 console.log( fetchedUserData?.job?.title );
 
+// Nulishing Coalescing
+const userInput = undefined;
+const storedData = userInput ?? 'DEFAULT';
+console.log( storedData );
+
 
 type UknownEmployee = Employee | Admin;
 
