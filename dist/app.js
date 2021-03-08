@@ -36,6 +36,13 @@ class ITDepartment extends Department {
         }
         this.addReports(value);
     }
+    static getInstance() {
+        if (ITDepartment.instance) {
+            return this.instance;
+        }
+        this.instance = new ITDepartment('LS', []);
+        return this.instance;
+    }
     addEmployee(name) {
         if (name === 'Max') {
             return;
@@ -53,7 +60,7 @@ class ITDepartment extends Department {
         console.log('IT Department - ID ' + this.id);
     }
 }
-const IT = new ITDepartment('LS', ['Max']);
+const IT = ITDepartment.getInstance();
 IT.addEmployee('Max');
 IT.addEmployee('Manu');
 IT.describe();
