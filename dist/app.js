@@ -55,3 +55,8 @@ function moveAnimal(animal) {
 moveAnimal({ type: 'bird', fyingSpeed: 10 });
 const userInpurElement = document.getElementById('user-input');
 userInpurElement.value = 'Hi there';
+const emailError = {
+    email: 'not a valid email',
+    username: 'Must start with a capital'
+};
+console.log(emailError);

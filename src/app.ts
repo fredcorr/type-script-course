@@ -105,3 +105,15 @@ moveAnimal( { type: 'bird', fyingSpeed: 10 } )
 // REACT WAY
 const userInpurElement = document.getElementById('user-input')! as HTMLInputElement;
 userInpurElement.value = 'Hi there';
+
+
+interface ErrorContainer {
+    [key: string]: string 
+}
+
+const emailError: ErrorContainer = {
+    email: 'not a valid email',
+    username: 'Must start with a capital'
+}
+
+console.log( emailError );
