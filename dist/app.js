@@ -1,25 +1,6 @@
 "use strict";
-let add;
-add = (n1, n2) => {
-    return n1 + n2;
+const e1 = {
+    name: 'Max',
+    priveleges: ['create-server'],
+    startDate: new Date()
 };
-let user1;
-class Person {
-    constructor(n) {
-        this.age = 30;
-        if (n) {
-            this.name = n;
-        }
-    }
-    greet(phrase) {
-        if (this.name) {
-            console.log(phrase + ' ' + this.name);
-        }
-        else {
-            console.log('Hi');
-        }
-    }
-}
-user1 = new Person();
-user1.greet('Hi there + I ');
-console.log(user1);
