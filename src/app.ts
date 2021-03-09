@@ -10,9 +10,11 @@
 //     data.split( ' ' )
 // })
 
-function merge<T, U>(objsA: T, objsB: U) {
+function merge<T extends object, U extends object>(objsA: T, objsB: U) {
     return Object.assign( objsA, objsB )
 }
 
-const mergeObj = merge({ name: 'Max' }, { age: 30 });
-console.log( mergeObj.age );
+const mergeObj = merge({ name: 'Max', hobbies: ['Sports'] }, { age: 30} );
+console.log( mergeObj );
+
+
