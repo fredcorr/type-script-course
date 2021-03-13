@@ -73,3 +73,5 @@ function createCourse( title: string, description: string, date: Date ): CourseG
     courseGoal.completeUntil = date;
     return courseGoal as CourseGoal;
 }
+
+const names: Readonly<string[]> = ['Max', 'Sports'];
