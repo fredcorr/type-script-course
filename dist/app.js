@@ -35,3 +35,10 @@ class DataStorage {
 }
 const textStorage = new DataStorage();
 textStorage.addItem('Bacon');
+function createCourse(title, description, date) {
+    let courseGoal = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.completeUntil = date;
+    return courseGoal;
+}
