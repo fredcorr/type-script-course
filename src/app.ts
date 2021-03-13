@@ -1,9 +1,22 @@
-function Logger(constructor: Function) {
-    console.log( 'Logging...' );
-    console.log( constructor );
+function Logger(logString: string) {
+    return function( constructor: Function ) {
+        console.log( logString );
+        console.log( constructor );
+    }
 }
 
-@Logger
+function WithTemplate( template: string, hookId: string ) {
+    return function( constructor: any ) {
+        const hookElement = document.getElementById( hookId );
+        const p = new constructor()
+        if ( hookElement ) {
+            hookElement.innerHTML = template;
+            hookElement.querySelector( 'h1' )!.textContent = p.name
+        }
+    }
+}
+
+@WithTemplate( '<h1>Person Object</h1>', 'App' )
 class Person {
     name = 'Max';
 
